@@ -1,0 +1,132 @@
+Timpul 0
+Clienți în așteptare: (3, 2, 2) (4, 14, 4) (2, 15, 2) (1, 20, 4) 
+Coada 1: închisă
+Coada 2: închisă
+
+Timpul 1
+Clienți în așteptare: (3, 2, 2) (4, 14, 4) (2, 15, 2) (1, 20, 4) 
+Coada 1: închisă
+Coada 2: închisă
+
+Timpul 2
+Clienți în așteptare: (4, 14, 4) (2, 15, 2) (1, 20, 4) 
+Coada 1: (3, 2, 2) 
+Coada 2: închisă
+
+Timpul 3
+Clienți în așteptare: (4, 14, 4) (2, 15, 2) (1, 20, 4) 
+Coada 1: (3, 2, 1) 
+Coada 2: închisă
+
+Timpul 4
+Clienți în așteptare: (4, 14, 4) (2, 15, 2) (1, 20, 4) 
+Coada 1: închisă
+Coada 2: închisă
+
+Timpul 5
+Clienți în așteptare: (4, 14, 4) (2, 15, 2) (1, 20, 4) 
+Coada 1: închisă
+Coada 2: închisă
+
+Timpul 6
+Clienți în așteptare: (4, 14, 4) (2, 15, 2) (1, 20, 4) 
+Coada 1: închisă
+Coada 2: închisă
+
+Timpul 7
+Clienți în așteptare: (4, 14, 4) (2, 15, 2) (1, 20, 4) 
+Coada 1: închisă
+Coada 2: închisă
+
+Timpul 8
+Clienți în așteptare: (4, 14, 4) (2, 15, 2) (1, 20, 4) 
+Coada 1: închisă
+Coada 2: închisă
+
+Timpul 9
+Clienți în așteptare: (4, 14, 4) (2, 15, 2) (1, 20, 4) 
+Coada 1: închisă
+Coada 2: închisă
+
+Timpul 10
+Clienți în așteptare: (4, 14, 4) (2, 15, 2) (1, 20, 4) 
+Coada 1: închisă
+Coada 2: închisă
+
+Timpul 11
+Clienți în așteptare: (4, 14, 4) (2, 15, 2) (1, 20, 4) 
+Coada 1: închisă
+Coada 2: închisă
+
+Timpul 12
+Clienți în așteptare: (4, 14, 4) (2, 15, 2) (1, 20, 4) 
+Coada 1: închisă
+Coada 2: închisă
+
+Timpul 13
+Clienți în așteptare: (4, 14, 4) (2, 15, 2) (1, 20, 4) 
+Coada 1: închisă
+Coada 2: închisă
+
+Timpul 14
+Clienți în așteptare: (2, 15, 2) (1, 20, 4) 
+Coada 1: (4, 14, 4) 
+Coada 2: închisă
+
+Timpul 15
+Clienți în așteptare: (1, 20, 4) 
+Coada 1: (4, 14, 3) 
+Coada 2: (2, 15, 2) 
+
+Timpul 16
+Clienți în așteptare: (1, 20, 4) 
+Coada 1: (4, 14, 2) 
+Coada 2: (2, 15, 1) 
+
+Timpul 17
+Clienți în așteptare: (1, 20, 4) 
+Coada 1: (4, 14, 1) 
+Coada 2: închisă
+
+Timpul 18
+Clienți în așteptare: (1, 20, 4) 
+Coada 1: închisă
+Coada 2: închisă
+
+Timpul 19
+Clienți în așteptare: (1, 20, 4) 
+Coada 1: închisă
+Coada 2: închisă
+
+Timpul 20
+Clienți în așteptare: 
+Coada 1: (1, 20, 4) 
+Coada 2: închisă
+
+Timpul 21
+Clienți în așteptare: 
+Coada 1: (1, 20, 3) 
+Coada 2: închisă
+
+Timpul 22
+Clienți în așteptare: 
+Coada 1: (1, 20, 2) 
+Coada 2: închisă
+
+Timpul 23
+Clienți în așteptare: 
+Coada 1: (1, 20, 1) 
+Coada 2: închisă
+
+Timpul 24
+Clienți în așteptare: 
+Coada 1: închisă
+Coada 2: închisă
+
+Timpul 25
+Clienți în așteptare: 
+Coada 1: închisă
+Coada 2: închisă
+
+Timpul 26
+Cli
