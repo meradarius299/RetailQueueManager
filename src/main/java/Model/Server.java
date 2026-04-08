@@ -19,7 +19,7 @@ public class Server implements Runnable {
             try {
                 Task currentTask = tasks.peek();
                 if (currentTask != null) {
-                    Thread.sleep(1000); // Simulează trecerea unei secunde
+                    Thread.sleep(1000);
                     int currentService = currentTask.getServiceTime();
                     if (currentService > 0) {
                         currentTask.setServiceTime(currentService - 1);
