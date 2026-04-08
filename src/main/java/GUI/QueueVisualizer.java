@@ -13,16 +13,13 @@ public class QueueVisualizer extends JPanel {
 
     public void updateData(List<Server> servers, List<Task> generatedTasks) {
         this.servers = servers;
-        // Dacă lista e null, creăm una goală ca să nu crape desenarea
         this.waitingTasks = (generatedTasks != null) ? new ArrayList<>(generatedTasks) : new ArrayList<>();
-        this.repaint(); // Forțează redesenarea
+        this.repaint(); 
     }
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-
-        // Zona de așteptare
         g.setColor(Color.BLACK);
         g.drawString("Clienți în așteptare (Waiting Room):", 20, 20);
 
@@ -30,19 +27,17 @@ public class QueueVisualizer extends JPanel {
         if (waitingTasks != null) {
             for (Task t : waitingTasks) {
                 g.setColor(Color.BLUE);
-                g.fillOval(startX, 30, 25, 25); // Desenează bulina
+                g.fillOval(startX, 30, 25, 25);
                 g.setColor(Color.WHITE);
-                g.drawString(String.valueOf(t.getId()), startX + 5, 48); // ID-ul în bulină
+                g.drawString(String.valueOf(t.getId()), startX + 5, 48);
                 startX += 30;
             }
         }
-
-        // Desenare Cozi
         if (servers != null) {
             int y = 100;
             for (Server s : servers) {
                 g.setColor(Color.DARK_GRAY);
-                g.fillRect(20, y, 40, 40); // Casa de marcat
+                g.fillRect(20, y, 40, 40);
 
                 int x = 70;
                 for (Task t : s.getTasks()) {
