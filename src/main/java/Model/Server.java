@@ -6,11 +6,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Server implements Runnable {
     private BlockingQueue<Task> tasks = new LinkedBlockingQueue<>();
-    private AtomicInteger waitingPeriod = new AtomicInteger(0);
-
+    private int waitingPeriod;
+    private int servicePeriod;
     public void addTask(Task newTask) {
         tasks.add(newTask);
-        waitingPeriod.addAndGet(newTask.getServiceTime());
+        waitingPeriod += newTask.getWaitingTime();
     }
 
     @Override
@@ -23,7 +23,7 @@ public class Server implements Runnable {
                     int currentService = currentTask.getServiceTime();
                     if (currentService > 0) {
                         currentTask.setServiceTime(currentService - 1);
-                        waitingPeriod.decrementAndGet();
+                        waitingPeriod -= currentTask.decrementWaitingTime();
                     }
                     if (currentTask.getServiceTime() == 0) tasks.poll();
                 }
@@ -32,5 +32,5 @@ public class Server implements Runnable {
     }
 
     public Task[] getTasks() { return tasks.toArray(new Task[0]); }
-    public int getWaitingPeriod() { return waitingPeriod.get(); }
+    public int getWaitingPeriod() { return waitingPeriod; }
 }

@@ -21,7 +21,7 @@ public class QueueVisualizer extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.setColor(Color.BLACK);
-        g.drawString("Clienți în așteptare (Waiting Room):", 20, 20);
+        g.drawString("Clienti in așteptare (Waiting Room):", 20, 20);
 
         int startX = 20;
         if (waitingTasks != null) {

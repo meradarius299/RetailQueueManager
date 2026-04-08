@@ -24,6 +24,22 @@ public class Task implements Comparable<Task> {
         return id;
     }
 
+    public int getWaitingTime() {
+        return serviceTime - arrivalTime;
+    }
+
+    public void addWaitingTime(int waitingTime) {
+        serviceTime += waitingTime;
+    }
+
+    public void setArrivalTime(int arrivalTime) {
+        this.arrivalTime = arrivalTime;
+    }
+
+    public int decrementWaitingTime() {
+        return --serviceTime;
+    }
+
     @Override
     public String toString() {
         return "(" + id + ", " + arrivalTime + ", " + serviceTime + ")";

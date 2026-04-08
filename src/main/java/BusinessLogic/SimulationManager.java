@@ -48,14 +48,14 @@ public class SimulationManager implements Runnable {
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         } finally {
-            frame.onFinish("Simulare încheiată.");
+            frame.onFinish("Simulare incheiata.");
         }
     }
 
     private String getFullStatus(int time) {
         StringBuilder sb = new StringBuilder();
         sb.append("Timpul ").append(time).append("\n");
-        sb.append("Clienți în așteptare: ");
+        sb.append("Clienti in asteptare: ");
         for (Task t : generatedTasks) {
             sb.append("(").append(t.getId()).append(", ")
                     .append(t.getArrivalTime()).append(", ")
@@ -68,7 +68,7 @@ public class SimulationManager implements Runnable {
             sb.append("Coada ").append(i + 1).append(": ");
             Task[] tasks = servers.get(i).getTasks();
             if (tasks.length == 0) {
-                sb.append("închisă");
+                sb.append("inchisa");
             } else {
                 for (Task t : tasks) {
                     sb.append("(").append(t.getId()).append(", ")
