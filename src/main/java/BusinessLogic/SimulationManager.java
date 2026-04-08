@@ -35,26 +35,20 @@ public class SimulationManager implements Runnable {
     @Override
     public void run() {
         int currentTime = 0;
-        // Specificăm numele fișierului pentru jurnal conform cerinței 5
         try (PrintWriter logFile = new PrintWriter(new FileWriter("simulation_log.txt"))) {
             while (currentTime <= timeLimit) {
-                processArrivals(currentTime); //
-
-                // Generăm textul pentru Jurnalul de evenimente (Cerința 5)
+                processArrivals(currentTime); 
                 String status = getFullStatus(currentTime);
-                logFile.println(status); // Scriem în fișier
-
-                // TRIMITEM DATELE CĂTRE ECRAN
-                // Trebuie să pasăm: timpul, serverele, lista de așteptare și textul
+                logFile.println(status); 
                 frame.updateVisuals(currentTime, scheduler.getServers(), generatedTasks, status);
 
                 currentTime++;
-                Thread.sleep(1000); // Ritmul de o secundă
+                Thread.sleep(1000); 
             }
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         } finally {
-            frame.onFinish("Simulare încheiată."); //
+            frame.onFinish("Simulare încheiată.");
         }
     }
 
@@ -63,7 +57,6 @@ public class SimulationManager implements Runnable {
         sb.append("Timpul ").append(time).append("\n");
         sb.append("Clienți în așteptare: ");
         for (Task t : generatedTasks) {
-            // Format: (ID, Sosire, Serviciu)
             sb.append("(").append(t.getId()).append(", ")
                     .append(t.getArrivalTime()).append(", ")
                     .append(t.getServiceTime()).append(") ");
@@ -88,22 +81,14 @@ public class SimulationManager implements Runnable {
         return sb.toString();
     }
     private void processArrivals(int currentTime) {
-        // Folosim un Iterator pentru a putea șterge în siguranță elementele din listă în timp ce o parcurgem
         Iterator<Task> iterator = generatedTasks.iterator();
 
         while (iterator.hasNext()) {
             Task task = iterator.next();
-
-            // Verificăm dacă timpul de sosire al clientului coincide cu timpul curent al simulării [cite: 20, 21]
             if (task.getArrivalTime() == currentTime) {
-                // Trimitem task-ul către scheduler pentru a fi repartizat unei cozi [cite: 52, 377]
                 scheduler.dispatchTask(task);
-
-                // Ștergem clientul din lista de așteptare deoarece a intrat în sistem [cite: 378]
                 iterator.remove();
             }
         }
     }
-
-
 }
